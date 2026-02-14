@@ -40,6 +40,7 @@ const allRoutes = new AllRoutes();
 
 allRoutes.addRoute(new Route("/", "Accueil", "/pages/home.html"));
 allRoutes.addRoute(new Route("404", "Page introuvable", "/pages/404.html"));
+allRoutes.addRoute(new Route("/galerie", "Galerie", "/pages/galerie.html"));
 
 export const websiteName = "Quai Antique";
 
