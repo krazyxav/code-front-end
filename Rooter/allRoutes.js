@@ -42,7 +42,11 @@ allRoutes.addRoute(new Route("/", "Accueil", "/pages/home.html"));
 allRoutes.addRoute(new Route("404", "Page introuvable", "/pages/404.html"));
 allRoutes.addRoute(new Route("/galerie", "Galerie", "/pages/galerie.html"));
 allRoutes.addRoute(new Route("/menu", "Menu", "/pages/menu.html"));
-allRoutes.addRoute(new Route("/signin", "Conenxion", "/pages/signin.html"));
+allRoutes.addRoute(new Route("/signin", "Conenxion", "/pages/auth/signin.html"));
+allRoutes.addRoute(new Route("/signup", "Inscription", "/pages/auth/signup.html"));
+allRoutes.addRoute(new Route("/account", "Mon Compte", "/pages/auth/account.html"));
+allRoutes.addRoute(new Route("/editPassword", "Changement Mot de passe", "/pages/auth/editPassword.html"));
+
 
 export const websiteName = "Quai Antique";
 
