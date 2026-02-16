@@ -12065,10 +12065,32 @@ p {
   transition: all 0.3s;
 }
 
+.dish-card, .cardSection-title {
+  position: relative;
+}
+.dish-card .action-dish-buttons, .dish-card .cardSection-buttons, .cardSection-title .action-dish-buttons, .cardSection-title .cardSection-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .menuContainer {
   max-width: 400px;
 }
 
 .form-label {
   color: #906427;
+}
+
+.allRerservations a {
+  display: block;
+  color: #292222;
+  padding: 10px;
+}
+
+.cardSection {
+  padding: 15px;
 }/*# sourceMappingURL=main.css.map */

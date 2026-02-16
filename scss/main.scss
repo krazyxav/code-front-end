@@ -96,11 +96,38 @@ p {
     }
 }
 
+.dish-card, .cardSection-title{
+
+    position: relative;
+
+    .action-dish-buttons, .cardSection-buttons{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
 .menuContainer {
     max-width: 400px;
 
 }
 
 .form-label {
-    color : $primary;
+    color: $primary;
+}
+
+.allRerservations{
+    a{
+        display: block;
+        color: $black;
+        padding: 10px;
+    }
+}
+
+.cardSection{
+    padding: 15px;
 }
