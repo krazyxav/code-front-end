@@ -46,6 +46,10 @@ document.getElementById("main-page").innerHTML = html;
 
     //afficher et masquer les éléments en fonction du rôle
     showAndHideElementsForRoles();
+
+    //retirer le loader
+    document.getElementById("indexLoader").classList.add("d-none");
+
 };
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
