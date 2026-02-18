@@ -20,31 +20,38 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/galery">Galerie</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="/menu">La carte</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/allResa">Réservation</a>
-                    </li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/account">Mon compte</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Accueil</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/galery">Galerie</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">La carte</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/signin">Connexion</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/allResa">Réservation</a>
+                        </li>
 
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/account">Mon compte</a>
+                        </li>
+
+                        <li class="nav-item" data-show="disconnected">
+                            <a class="nav-link" href="/signin">Connexion</a>
+                        </li>
+
+                        <li class="nav-item" data-show="connected">
+                            <button class="nav-link" id="signout-btn">Déconnexion</button>
+                        </li>
+
+                    </ul>
 
                 </div>
             </div>
@@ -54,7 +61,7 @@
 
     <main id="main-page">
         
-
+        
 
     </main>
 
@@ -83,8 +90,8 @@
         </div>
 
     </footer>
-
-    <script type="module" src="Rooter/Router.js"></script>
+    <script src="js/script.js"></script>
+    <script type="module" src="Rooter/router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
