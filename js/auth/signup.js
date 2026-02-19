@@ -3,6 +3,7 @@ const inputFirstName = document.getElementById("FirstNameInput");
 const inputEmail = document.getElementById("emailInput");
 const inputPassword = document.getElementById("passwordInput");
 const inputValidatePassword = document.getElementById("validatePasswordInput");
+const registerForm = document.getElementById("registerForm");
 
 const btnInscriptionValidation = document.getElementById("btn-inscription-validation");
 
@@ -11,6 +12,8 @@ inputFirstName.addEventListener("keyup", validateForm);
 inputEmail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidatePassword.addEventListener("keyup", validateForm);
+
+btnInscriptionValidation.addEventListener("click", registerUser);
 
 //revoir ce fonctionnement, les zones non correctes ne devraient
 //apparaitre que si le bouton inscription est appuyé plutôt qu'à
@@ -89,4 +92,37 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd){
         inputConfirmPwd.classList.remove("is-valid");
         return false;
     }
+}
+
+function registerUser() {
+
+    let dataForm = new FormData(registerForm);
+
+    // let name = dataForm.get("nameInput");
+    // let firstName = dataForm.get("firstNameInput");
+    // let email = dataForm.get("emailInput");
+    // let password = dataForm.get("passwordInput");
+
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+    "firstName": dataForm.get("firstNameInput"),
+    "lastName": dataForm.get("nameInput"),
+    "email": dataForm.get("emailInput"),
+    "password": dataForm.get("passwordInput")
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("http://127.0.0.1:8000/api/registration", requestOptions)
+    .then((response) => response.json())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
 }
